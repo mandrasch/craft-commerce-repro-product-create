@@ -58,5 +58,4 @@ craft make module
 - Add product type general
 - Add console command (modules)
 
-
-
+Thanks to https://github.com/craftcms/commerce/discussions/3458
