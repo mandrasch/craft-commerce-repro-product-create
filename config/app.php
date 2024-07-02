@@ -21,7 +21,8 @@
  */
 
 use craft\helpers\App;
+use modules\MyModule;
 
 return [
-    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS', 'modules' => ['my-module' => MyModule::class], 'bootstrap' => ['my-module'],
 ];
