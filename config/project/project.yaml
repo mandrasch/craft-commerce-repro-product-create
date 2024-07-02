@@ -1,4 +1,4 @@
-dateModified: 1719941454
+dateModified: 1719941744
 email:
   fromEmail: admin@example.com
   fromName: Testsite
@@ -14,9 +14,10 @@ plugins:
   commerce:
     edition: pro
     enabled: true
+    licenseKey: 5NUHDPZQV5E5A23BGY97RT7X
     schemaVersion: 5.0.74
 system:
-  edition: solo
+  edition: pro
   live: true
   name: Testsite
   schemaVersion: 5.0.0.21
