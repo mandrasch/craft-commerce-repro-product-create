@@ -11,6 +11,8 @@ Run console command via:
 ddev craft my-module/product/create
 ```
 
+User: admin, password: password123
+
 ## How was this created
 
 ```bash
