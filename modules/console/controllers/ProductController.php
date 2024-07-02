@@ -22,22 +22,17 @@ class ProductController extends Controller
     public function actionCreate(): int
     {
 
-        $elementService = Craft::$app->getElements();
+        // TODO: init with Product::class?
 
+        // Prepare new entry
         $product = new Product();
-        //  or use $product = $elementService->createElement(ProductElement::class); ?
 
-        // use validated values from our model, set them to the entry we're about to save
+        // Use validated values from our model, set them to the entry we're about to save
         $product->title = 'My test product - '.time();
         $productTypeId = Commerce::getInstance()->getProductTypes()->getProductTypeByHandle('general')->id;
         $product->typeId = $productTypeId;
 
-        // A simple variant
-        $variant = new Variant();
-        $variant->sku = time();
-        $variant->price = 10;
-
-        $product->setVariants([$variant]);
+ 
 
         // Set custom field (required field, we shouldn't get past save?)
         /*$product->setFieldValues([
@@ -45,8 +40,8 @@ class ProductController extends Controller
         ]);*/
 
         try {
-            // Try to save new entry (with validation)
-            if (!$elementService->saveElement($product, true)) {
+            // Try to save new entry (with validation = true by default)
+            if (!Craft::$app->elements->saveElement($product)) {
                 if ($product->hasErrors()) {
                     $validationErrors = [];
 
@@ -65,6 +60,33 @@ class ProductController extends Controller
         }
 
         $this->stdout('Product created - id: '.$product->id.PHP_EOL, Console::FG_GREEN);
+
+        // A simple variant
+        $variant = new Variant();
+        $variant->sku = time();
+        $variant->price = 10;
+        $variant->isDefault = true;
+        $variant->title = 'My test variant - '.time();
+        // important - otherwise error (Exception 'TypeError' with message 'craft\commerce\elements\Variant::updateTitle(): Argument #1 ($product) must be of type craft\commerce\elements\Product, null given, called in /var/www/html/vendor/craftcms/commerce/src/elements/Variant.php on line 1005')
+        $variant->primaryOwnerId = $product->id;
+
+        // Save variant before adding it to the product (important)
+        if(!Craft::$app->elements->saveElement($variant)){
+                $this->stderr('Could not save variant', Console::FG_RED);
+
+                $this->stderr('Errors: '.print_r($variant->getErrors(), true));
+
+                return ExitCode::UNSPECIFIED_ERROR;
+        }
+        $this->stdout('Variant saved'.PHP_EOL, Console::FG_GREEN);
+
+        // Add variant to product
+        $product->setVariants([$variant]);
+        if(!Craft::$app->elements->saveElement($product)){
+            $this->stderr('Could not save product', Console::FG_RED);
+            return ExitCode::UNSPECIFIED_ERROR;
+        }
+        $this->stdout('Product saved'.PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
     }
