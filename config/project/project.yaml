@@ -1,0 +1,30 @@
+dateModified: 1719941454
+email:
+  fromEmail: admin@example.com
+  fromName: Testsite
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    6fc0244d-6ccb-4cb1-b1e5-c10752c00220: Testsite # Testsite
+    22ed0f81-7934-43be-9e7e-8cfe3587c410: Dummy # Dummy
+    48339d33-cdce-440a-95f7-107756106329: Testsite # Testsite
+    ac75e754-1dde-4b93-aeb9-e267f370616b: Primary # Primary
+    e2e770f1-9ee6-4664-a29c-482aa27e753a: New # New
+plugins:
+  commerce:
+    edition: pro
+    enabled: true
+    schemaVersion: 5.0.74
+system:
+  edition: solo
+  live: true
+  name: Testsite
+  schemaVersion: 5.0.0.21
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
