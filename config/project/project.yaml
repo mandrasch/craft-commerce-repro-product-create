@@ -1,4 +1,4 @@
-dateModified: 1719941852
+dateModified: 1719942785
 email:
   fromEmail: admin@example.com
   fromName: Testsite
@@ -10,6 +10,7 @@ meta:
     660b2918-0d3b-4556-ae6f-0e4f8adc5e83: General # General
     48339d33-cdce-440a-95f7-107756106329: Testsite # Testsite
     ac75e754-1dde-4b93-aeb9-e267f370616b: Primary # Primary
+    c8c46842-af9f-4880-aebc-26583c15b659: 'Common Plain Text' # Common Plain Text
     e2e770f1-9ee6-4664-a29c-482aa27e753a: New # New
 plugins:
   commerce:
@@ -17,6 +18,10 @@ plugins:
     enabled: true
     licenseKey: 5NUHDPZQV5E5A23BGY97RT7X
     schemaVersion: 5.0.74
+  timber:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true

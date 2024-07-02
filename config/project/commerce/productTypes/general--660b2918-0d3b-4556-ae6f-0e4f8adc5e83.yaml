@@ -59,6 +59,21 @@ productFieldLayouts:
             uid: 7f70031b-f473-41ac-b37c-f08c1333fa90
             userCondition: null
             warning: null
+          -
+            elementCondition: null
+            fieldUid: c8c46842-af9f-4880-aebc-26583c15b659 # Common Plain Text
+            handle: customRequiredField1
+            includeInCards: false
+            instructions: null
+            label: 'Custom Required Field 1'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e43c6c9-f5a4-42a8-a1de-161847fc7b69
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 5ff418e5-3c49-4075-81e9-f5aa31f9d7bd
         userCondition: null
