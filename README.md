@@ -13,6 +13,10 @@ ddev craft my-module/product/create
 
 User: admin, password: password123
 
+## Problems
+
+- [ ] Custom required field for products (product type) is not validated by `Craft::$app->elements->saveElement($product)`
+
 ## How was this created
 
 ```bash
