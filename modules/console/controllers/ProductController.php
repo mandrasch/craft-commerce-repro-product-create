@@ -22,7 +22,7 @@ class ProductController extends Controller
     public function actionCreate(): int
     {
 
-        // TODO: init with Product::class?
+        // Thanks to https://github.com/craftcms/commerce/discussions/3458
 
         // Prepare new entry
         $product = new Product();
@@ -31,8 +31,6 @@ class ProductController extends Controller
         $product->title = 'My test product - '.time();
         $productTypeId = Commerce::getInstance()->getProductTypes()->getProductTypeByHandle('general')->id;
         $product->typeId = $productTypeId;
-
- 
 
         // Set custom field (required field, we shouldn't get past save?)
         /*$product->setFieldValues([
