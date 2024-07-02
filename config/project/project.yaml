@@ -1,4 +1,4 @@
-dateModified: 1719941744
+dateModified: 1719941852
 email:
   fromEmail: admin@example.com
   fromName: Testsite
@@ -7,6 +7,7 @@ meta:
   __names__:
     6fc0244d-6ccb-4cb1-b1e5-c10752c00220: Testsite # Testsite
     22ed0f81-7934-43be-9e7e-8cfe3587c410: Dummy # Dummy
+    660b2918-0d3b-4556-ae6f-0e4f8adc5e83: General # General
     48339d33-cdce-440a-95f7-107756106329: Testsite # Testsite
     ac75e754-1dde-4b93-aeb9-e267f370616b: Primary # Primary
     e2e770f1-9ee6-4664-a29c-482aa27e753a: New # New
