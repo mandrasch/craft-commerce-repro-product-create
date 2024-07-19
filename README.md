@@ -79,30 +79,17 @@ go run concurrent.go -testType=rest
 
 Local DDEV testing: 
 - sometimes "read tcp -> connection reset by peer"
-- runs in `net/http: TLS handshake timeout` -> then needs restart of Orbstack (and restart DDEV project with `ddev start`)
-- some actions were not successful with
+- after first attempts: runs in `net/http: TLS handshake timeout` -> then needs restart of Orbstack (and restart DDEV project with `ddev start`), Docker network related I guess
+- some (rare) actions were not successful with, but this was an exception
 
 ```
 Raw Response Body: Bad Gateway
 REST Request Error: error unmarshalling response body: invalid character 'B' looking for beginning of value
 Raw Response Body: Internal Server Error
 REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
-Raw Response Body: Internal Server Error
-REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
-Raw Response Body: Internal Server Error
-REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
-Raw Response Body: {"success":true}
-Raw Response Body: Internal Server Error
-REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
-Raw Response Body: {"success":true}
-Raw Response Body: {"success":true}
-Raw Response Body: Internal Server Error
-REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
-Raw Response Body: Internal Server Error
-REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
 ```
 
-But no deadlock seen yet so far like in GraphQL ...
+BUT ... no deadlock seen yet so far like in GraphQL testing. 
 
 ## How was this created
 
