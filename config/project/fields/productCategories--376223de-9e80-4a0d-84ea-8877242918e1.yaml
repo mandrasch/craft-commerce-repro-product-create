@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: productCategories
+instructions: "Select one product category, multiple categories are not supported here.\r\n\r\n"
+name: 'Product Categories'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: 1
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:cdec25d5-684f-41ff-8fc7-f0935d020549' # Product Categories
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

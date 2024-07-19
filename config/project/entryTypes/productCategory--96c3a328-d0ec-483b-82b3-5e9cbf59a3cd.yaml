@@ -1,0 +1,65 @@
+color: null
+fieldLayouts:
+  9c9ebbe4-6a5d-4400-a887-adf6c96acedc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7ca94726-5e2a-4cdc-8918-497541e7a5f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c8c46842-af9f-4880-aebc-26583c15b659 # Common Plain Text
+            handle: subline
+            includeInCards: false
+            instructions: null
+            label: Subline
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1e71e52-bd18-4e2c-85b0-96e7d888de5b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 78cd103a-cd04-48a9-983e-fbc7fc72241b
+        userCondition: null
+handle: productCategory
+hasTitleField: true
+icon: ''
+name: 'Product Category'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

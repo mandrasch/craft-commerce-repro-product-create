@@ -1,16 +1,21 @@
-dateModified: 1719942785
+dateModified: 1721382128
 email:
   fromEmail: admin@example.com
   fromName: Testsite
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0f99cee4-5957-4b55-8de9-9b03ebe0f9f8: 'Public Schema' # Public Schema
     6fc0244d-6ccb-4cb1-b1e5-c10752c00220: Testsite # Testsite
+    9ef8f2a9-d981-4a73-8db1-69675b452cea: 'Private Schema' # Private Schema
     22ed0f81-7934-43be-9e7e-8cfe3587c410: Dummy # Dummy
+    96c3a328-d0ec-483b-82b3-5e9cbf59a3cd: 'Product Category' # Product Category
     660b2918-0d3b-4556-ae6f-0e4f8adc5e83: General # General
     48339d33-cdce-440a-95f7-107756106329: Testsite # Testsite
+    376223de-9e80-4a0d-84ea-8877242918e1: 'Product Categories' # Product Categories
     ac75e754-1dde-4b93-aeb9-e267f370616b: Primary # Primary
     c8c46842-af9f-4880-aebc-26583c15b659: 'Common Plain Text' # Common Plain Text
+    cdec25d5-684f-41ff-8fc7-f0935d020549: 'Product Categories' # Product Categories
     e2e770f1-9ee6-4664-a29c-482aa27e753a: New # New
 plugins:
   commerce:
@@ -21,6 +26,7 @@ plugins:
   timber:
     edition: standard
     enabled: true
+    licenseKey: YPU0AZ4OKM5T0E4JQRKVLKXO
     schemaVersion: 1.0.0
 system:
   edition: pro

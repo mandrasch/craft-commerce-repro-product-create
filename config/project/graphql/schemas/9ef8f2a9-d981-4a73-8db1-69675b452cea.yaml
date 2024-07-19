@@ -1,0 +1,11 @@
+isPublic: false
+name: 'Private Schema'
+scope:
+  - 'sites.6fc0244d-6ccb-4cb1-b1e5-c10752c00220:read' # Testsite
+  - 'sections.cdec25d5-684f-41ff-8fc7-f0935d020549:read' # Product Categories
+  - 'usergroups.everyone:read'
+  - 'productTypes.660b2918-0d3b-4556-ae6f-0e4f8adc5e83:read' # General
+  - 'sections.cdec25d5-684f-41ff-8fc7-f0935d020549:edit' # Product Categories
+  - 'sections.cdec25d5-684f-41ff-8fc7-f0935d020549:create' # Product Categories
+  - 'sections.cdec25d5-684f-41ff-8fc7-f0935d020549:save' # Product Categories
+  - 'sections.cdec25d5-684f-41ff-8fc7-f0935d020549:delete' # Product Categories

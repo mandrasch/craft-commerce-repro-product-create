@@ -1,0 +1,18 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  - 96c3a328-d0ec-483b-82b3-5e9cbf59a3cd # Product Category
+handle: productCategories
+maxAuthors: 1
+name: 'Product Categories'
+propagationMethod: all
+siteSettings:
+  6fc0244d-6ccb-4cb1-b1e5-c10752c00220: # Testsite
+    enabledByDefault: true
+    hasUrls: true
+    template: product-categories/_entry
+    uriFormat: 'product-categories/{slug}'
+structure:
+  maxLevels: 1
+  uid: e392f163-05ee-442b-a235-cc4cc1554964
+type: structure
