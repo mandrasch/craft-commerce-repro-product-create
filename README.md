@@ -69,7 +69,40 @@ GraphQL Errors: [map[debugMessage:SQLSTATE[40001]: Serialization failure: 1213 D
 
 ```
 
+- [ ] WIP: REST Testing in comparison - is this purely a GraphQL problem with mutations
 
+```bash
+# needs go installed on your local laptop
+cd test-concurrent
+go run concurrent.go -testType=rest   
+```
+
+Local DDEV testing: 
+- sometimes "read tcp -> connection reset by peer"
+- runs in `net/http: TLS handshake timeout` -> then needs restart of Orbstack (and restart DDEV project with `ddev start`)
+- some actions were not successful with
+
+```
+Raw Response Body: Bad Gateway
+REST Request Error: error unmarshalling response body: invalid character 'B' looking for beginning of value
+Raw Response Body: Internal Server Error
+REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
+Raw Response Body: Internal Server Error
+REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
+Raw Response Body: Internal Server Error
+REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
+Raw Response Body: {"success":true}
+Raw Response Body: Internal Server Error
+REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
+Raw Response Body: {"success":true}
+Raw Response Body: {"success":true}
+Raw Response Body: Internal Server Error
+REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
+Raw Response Body: Internal Server Error
+REST Request Error: error unmarshalling response body: invalid character 'I' looking for beginning of value
+```
+
+But no deadlock seen yet so far like in GraphQL ...
 
 ## How was this created
 
