@@ -19,9 +19,9 @@ Not yet activated, see source code:
 
 - [ ] Custom required field for products (product type) is not validated by `Craft::$app->elements->saveElement($product)`
 
-### B) GraphQL deadlock issues? (WIP)
+### B) GraphQL deadlock issues for conurrent mutations (WIP)
 
-Run graphql test via a go(lang) script:
+Run graphql test via a go(lang) script on your local laptop, three workers in parallel:
 
 ```bash
 cd test-graphl-mutation/
